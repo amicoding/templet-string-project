@@ -15,7 +15,12 @@
       <h2>${objInfo.productTitle}</h2>
       <p>${objInfo.productDes}</p>
       <h2>Price : ${objInfo.productPrice}</h2>
-      <button type="submit">Details More</button>
+    
+         <a href="${objInfo.detailsUrl}" target="_blank"
+          <button class="btn" type="submit">Details More</button>
+        </a>
+         
+    
         </div> 
  `;
  
@@ -34,12 +39,14 @@
    let productTitle =  e.target.title.value;
    let productPrice =  e.target.price.value;
    let productDes =  e.target.des.value;
+   let detailsUrl = e.target.dUrl.value;
    
    let info = {
      productUrl,
      productTitle,
      productPrice,
-     productDes
+     productDes,
+     detailsUrl
      
    }
   
